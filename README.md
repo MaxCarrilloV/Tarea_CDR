@@ -1,4 +1,5 @@
 # Tarea_CDR
 
-#Maximiliano Carrillo
-#Jazmín Contreras
+Maximiliano Carrillo
+
+Jazmín Contreras
