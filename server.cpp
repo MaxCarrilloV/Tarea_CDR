@@ -218,7 +218,7 @@ private:
         send(clientSocket, clientBoard, sizeof(clientBoard), 0);
     }
 
-    void sendTurnToClient(int clientSocket, int& currentPlayer) {
+    void sendTurnToClient(int clientSocket ,int currentPlayer) {
         // Enviar turno actual al cliente
         send(clientSocket, &currentPlayer, sizeof(int), 0);
     }
@@ -293,7 +293,3 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
-
-
-
-
