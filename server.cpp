@@ -69,7 +69,7 @@ private:
         }
 
         // Escuchar conexiones entrantes
-        listen(serverSocket, 5);
+        listen(serverSocket, 10);
     }
 
     void initializeGame() {
