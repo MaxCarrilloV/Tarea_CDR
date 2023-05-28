@@ -8,6 +8,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <thread>
+#include <arpa/inet.h>
 
 #define BOARD_SIZE 15
 #define PORTA_AVIONES 5
@@ -157,7 +158,10 @@ private:
         thread t(&Server::playGame, this, clientSocket);
         t.detach();
 
-        cout << "Cliente conectado." << endl;
+        char *direccionIP = inet_ntoa(clientAddress.sin_addr);
+        int puertoCliente = ntohs(clientAddress.sin_port);
+
+        cout << "Cliente conectado: " << direccionIP << ":" << puertoCliente << std::endl;
         initializeGame();
     }
 
