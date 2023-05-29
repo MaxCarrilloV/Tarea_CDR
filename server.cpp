@@ -69,7 +69,7 @@ private:
         }
 
         // Escuchar conexiones entrantes
-        listen(serverSocket, 10);
+        listen(serverSocket, 5);
     }
 
     void initializeGame() {
@@ -297,3 +297,4 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
+
